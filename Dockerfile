@@ -14,7 +14,7 @@ ADD . /picfit
 WORKDIR /picfit
 ADD fuzzers/fuzz_processor.go ./fuzzers/
 WORKDIR ./fuzzers/
-RUN go mod init myfuzz
+RUN go mod init fuzzprocessor
 RUN go install github.com/dvyukov/go-fuzz/go-fuzz@latest github.com/dvyukov/go-fuzz/go-fuzz-build@latest
 RUN go get github.com/dvyukov/go-fuzz/go-fuzz-dep
 RUN go get github.com/thoas/picfit
